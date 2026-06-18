@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing · StreamGodz</title>
+  <meta name="description" content="StreamGodz subscription plans. 3 tiers from $15/month. 45,000+ channels, 4K quality, 7-day money-back guarantee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="left">
+      <span>STREAMGODZ · v4.7</span>
+      <span class="ok">SIGNAL · OPTIMAL</span>
+      <span>EU·US·APAC</span>
+    </div>
+    <div class="right">
+      <span data-clock>UTC 00:00:00</span>
+      <span>UPTIME 99.99%</span>
+      <span class="alert">50,247 STREAMING</span>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-bracket">[</span>STREAM<span class="godz">GODZ</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="installation.html">Installation</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn">CART <span class="cart-count">00</span></button>
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-offset pricing-page">
+    <!-- Subpage header -->
+    <header class="subpage-header">
+      <div class="container">
+        <div class="eyebrow">CH.100 · PRICING TIERS</div>
+        <h1>Choose your <span class="tally">subscription</span> level.</h1>
+        <p>All plans include 45,000+ channels, full VOD library, EPG guide, and TV replay. Protected by our 7-day money-back guarantee.</p>
+      </div>
+    </header>
+
+    <!-- Countdown -->
+    <div class="countdown-band">
+      <div class="countdown-inner">
+        <div class="countdown-label">LIMITED OFFER · EXPIRES IN</div>
+        <div class="countdown-timer">
+          <div class="countdown-unit" data-unit="hours">
+            <span class="countdown-num">00</span>
+            <span class="countdown-name">Hours</span>
+          </div>
+          <div class="countdown-unit" data-unit="minutes">
+            <span class="countdown-num">00</span>
+            <span class="countdown-name">Mins</span>
+          </div>
+          <div class="countdown-unit" data-unit="seconds">
+            <span class="countdown-num">00</span>
+            <span class="countdown-name">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="trust-inner">
+        <div class="trust-item"><span class="trust-icon">●</span> SECURE PAYMENT</div>
+        <div class="trust-item"><span class="trust-icon">●</span> 7-DAY MONEY BACK</div>
+        <div class="trust-item"><span class="trust-icon">●</span> INSTANT DELIVERY</div>
+        <div class="trust-item"><span class="trust-icon">●</span> NO CONTRACT</div>
+      </div>
+    </div>
+
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <!-- STARTER -->
+          <div class="price-card">
+            <div class="price-channel-id">CH.001 · 25K CHANNELS</div>
+            <div class="price-name">STARTER</div>
+            <div class="price-tagline">Try it. Love it. Stay.</div>
+            <div class="price-old">$29.95</div>
+            <div class="price-amount">
+              <span class="price-currency">$</span>
+              <span class="price-num">15</span>
+              <span class="price-period">/month</span>
+            </div>
+            <div class="price-permonth">SAVE 50%</div>
+            <ul class="price-features">
+              <li>25,000+ live channels</li>
+              <li>HD & FHD streaming</li>
+              <li>Full VOD library</li>
+              <li>Anti-buffer CDN</li>
+              <li>1 device connection</li>
+              <li>EPG & TV replay</li>
+              <li>24/7 support</li>
+            </ul>
+            <button class="btn btn-ghost btn-block" onclick="addToCart('starter')">ADD TO CART →</button>
+            <div class="payment-strip">VISA · MASTERCARD · PAYPAL · CRYPTO</div>
+          </div>
+
+          <!-- PRO (featured) -->
+          <div class="price-card featured">
+            <div class="price-badge">◉ MOST POPULAR · SAVE 58%</div>
+            <div class="price-channel-id">CH.002 · 35K CHANNELS</div>
+            <div class="price-name">PRO</div>
+            <div class="price-tagline">Best value per month.</div>
+            <div class="price-old">$59.95</div>
+            <div class="price-amount">
+              <span class="price-currency">$</span>
+              <span class="price-num">25</span>
+              <span class="price-period">/6 months</span>
+            </div>
+            <div class="price-permonth">$4.17/MONTH EQUIVALENT</div>
+            <ul class="price-features">
+              <li>35,000+ live channels</li>
+              <li>HD, FHD & 4K streaming</li>
+              <li>Full VOD library</li>
+              <li>Anti-buffer CDN</li>
+              <li>2 device connections</li>
+              <li>PPV events included</li>
+              <li>EPG & TV replay</li>
+              <li>Priority 24/7 support</li>
+            </ul>
+            <button class="btn btn-primary btn-block" onclick="addToCart('pro')">ADD TO CART →</button>
+            <div class="payment-strip">VISA · MASTERCARD · PAYPAL · CRYPTO</div>
+          </div>
+
+          <!-- ELITE -->
+          <div class="price-card">
+            <div class="price-badge alt">BEST LONG-TERM VALUE</div>
+            <div class="price-channel-id">CH.003 · 45K CHANNELS</div>
+            <div class="price-name">ELITE</div>
+            <div class="price-tagline">For the true streamer.</div>
+            <div class="price-old">$99.95</div>
+            <div class="price-amount">
+              <span class="price-currency">$</span>
+              <span class="price-num">35</span>
+              <span class="price-period">/year</span>
+            </div>
+            <div class="price-permonth">$2.92/MONTH · SAVE 65%</div>
+            <ul class="price-features">
+              <li>45,000+ live channels</li>
+              <li>HD, FHD & 4K streaming</li>
+              <li>Full VOD library</li>
+              <li>Anti-buffer CDN</li>
+              <li>3 device connections</li>
+              <li>PPV events included</li>
+              <li>Early access to new channels</li>
+              <li>VIP 24/7 support</li>
+            </ul>
+            <button class="btn btn-ghost btn-block" onclick="addToCart('elite')">ADD TO CART →</button>
+            <div class="payment-strip">VISA · MASTERCARD · PAYPAL · CRYPTO</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-bracket">[</span>STREAM<span class="godz">GODZ</span><span class="logo-bracket">]</span></div>
+          <p>Premium IPTV broadcast infrastructure. 45,000+ live channels in HD/4K. Built like a control room.</p>
+        </div>
+        <div><h4>NAV</h4><ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="installation.html">Installation</a></li>
+        </ul></div>
+        <div><h4>LEGAL</h4><ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+        </ul></div>
+        <div><h4>SUPPORT</h4><ul>
+          <li><a href="pricing.html">View Plans</a></li>
+          <li><a href="installation.html">Setup Help</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">© 2026 STREAMGODZ · ALL RIGHTS RESERVED</div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-header"><h3>// YOUR CART</h3><button class="cart-close">×</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer" style="display:none;"></div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

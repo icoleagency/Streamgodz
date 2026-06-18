@@ -1,0 +1,83 @@
+/* ============ LEGAL ============ */
+.legal-page { background: var(--bg); padding-bottom: 60px; }
+.legal-content {
+  max-width: 820px;
+  margin: 40px auto 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 48px;
+  position: relative;
+}
+.legal-content::before {
+  content: '';
+  position: absolute; top: -1px; left: -1px;
+  width: 24px; height: 24px;
+  border-top: 2px solid var(--tally);
+  border-left: 2px solid var(--tally);
+}
+.legal-content::after {
+  content: '';
+  position: absolute; bottom: -1px; right: -1px;
+  width: 24px; height: 24px;
+  border-bottom: 2px solid var(--tally);
+  border-right: 2px solid var(--tally);
+}
+
+.legal-last-updated {
+  background: var(--bg);
+  border-left: 3px solid var(--tally);
+  padding: 16px 20px;
+  margin-bottom: 36px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.legal-last-updated strong { color: var(--tally); }
+
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text);
+  margin: 40px 0 16px;
+  letter-spacing: -0.01em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--tally);
+  display: inline-block;
+}
+.legal-content h2:first-of-type { margin-top: 0; }
+.legal-content h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  margin: 24px 0 10px;
+}
+.legal-content p {
+  color: var(--text-soft);
+  font-family: var(--font-body);
+  margin-bottom: 16px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.legal-content ul, .legal-content ol {
+  margin: 12px 0 18px 24px;
+}
+.legal-content li {
+  color: var(--text-soft);
+  font-family: var(--font-body);
+  margin-bottom: 8px;
+  line-height: 1.65;
+  font-size: 14px;
+}
+.legal-content strong { color: var(--text); }
+.legal-content a {
+  color: var(--tally);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-content a:hover { color: var(--tally-glow); }
+
+@media (max-width: 680px) {
+  .legal-content { padding: 28px 22px; }
+}

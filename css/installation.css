@@ -1,0 +1,178 @@
+/* ============ INSTALLATION ============ */
+.install-page { padding-bottom: 80px; }
+
+.install-tabs {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  max-width: var(--max-width); margin: 0 auto;
+  padding: 32px 24px 0;
+}
+.install-tab {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.install-tab:hover { border-color: var(--tally); }
+.install-tab.active {
+  background: var(--tally);
+  border-color: var(--tally);
+  color: var(--bg);
+  font-weight: 700;
+}
+.install-tab-id {
+  font-family: var(--font-mono);
+  opacity: 0.6;
+}
+
+.install-content {
+  max-width: 880px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+.install-panel { display: none; }
+.install-panel.active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.install-panel-head {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  padding: 28px;
+  position: relative;
+}
+.install-panel-head::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 16px; height: 16px;
+  border-top: 2px solid var(--tally);
+  border-left: 2px solid var(--tally);
+}
+.install-panel-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--tally);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.install-panel-head h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.install-panel-head p {
+  font-family: var(--font-body);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+.install-steps {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 28px;
+  position: relative;
+}
+.install-steps::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 16px; height: 16px;
+  border-bottom: 2px solid var(--tally);
+  border-right: 2px solid var(--tally);
+}
+
+.install-step {
+  display: flex; gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.install-step:last-child { border-bottom: none; padding-bottom: 0; }
+.install-step:first-child { padding-top: 0; }
+.install-step-num {
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  background: var(--bg);
+  border: 1px solid var(--tally);
+  color: var(--tally);
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+}
+.install-step-content h4 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.install-step-content p {
+  font-family: var(--font-body);
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.install-step-content code {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--tally);
+  letter-spacing: 0.02em;
+}
+
+.install-help {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 107, 26, 0.12) 0%, transparent 50%),
+    var(--panel);
+  border: 1px solid var(--tally);
+  padding: 36px;
+  text-align: center;
+  margin-top: 32px;
+  position: relative;
+}
+.install-help::before {
+  content: '';
+  position: absolute; top: -1px; left: -1px;
+  width: 24px; height: 24px;
+  border-top: 2px solid var(--tally);
+  border-left: 2px solid var(--tally);
+}
+.install-help-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--tally);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.install-help h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.install-help p {
+  font-family: var(--font-body);
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 680px) {
+  .install-tabs { padding: 24px 12px 0; }
+  .install-tab { padding: 10px 14px; font-size: 10px; }
+  .install-panel-head, .install-steps { padding: 22px; }
+  .install-panel-head h2 { font-size: 22px; }
+}
