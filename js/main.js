@@ -213,6 +213,82 @@ function initInstallTabs() {
   });
 }
 
+/* MARQUEE */
+function initMarquee() {
+  const logoRow = document.querySelector('#logo-row');
+  const eventRow = document.querySelector('#event-row');
+  if (!logoRow || !eventRow) return;
+
+  const networks = [
+    { name: 'ESPN', color: 'red', style: 'italic', sub: '4K · LIVE' },
+    { name: 'HBO', color: 'white', style: 'condensed', sub: 'MAX · UHD' },
+    { name: 'SKY SPORTS', color: 'red', style: 'condensed', sub: 'UK · 4K' },
+    { name: 'NBA TV', color: 'blue', style: 'condensed', sub: 'LIVE GAMES' },
+    { name: 'DISNEY+', color: 'blue', style: 'script', sub: 'FAMILY · UHD' },
+    { name: 'FOX', color: 'white', style: 'condensed', sub: 'NEWS · SPORTS' },
+    { name: 'NFL', color: 'white', style: 'condensed', sub: 'SUNDAY TICKET' },
+    { name: 'BBC', color: 'red', style: 'condensed', sub: 'UK · FREE' },
+    { name: 'PARAMOUNT+', color: 'cyan', style: 'condensed', sub: 'PREMIUM' },
+    { name: 'TNT', color: 'yellow', style: 'condensed', sub: 'NBA · UFC' },
+    { name: 'SHOWTIME', color: 'red', style: 'italic', sub: 'PREMIUM' },
+    { name: 'STARZ', color: 'white', style: 'italic', sub: 'PREMIUM' },
+    { name: 'PEACOCK', color: 'cyan', style: 'condensed', sub: 'NBC · OLYMPICS' },
+    { name: 'DAZN', color: 'yellow', style: 'condensed', sub: 'BOXING · MMA' },
+    { name: 'CBS SPORTS', color: 'blue', style: 'condensed', sub: 'NFL · NCAA' },
+    { name: 'BT SPORT', color: 'purple', style: 'condensed', sub: 'UK · 4K' },
+    { name: 'TSN', color: 'red', style: 'condensed', sub: 'CANADA' },
+    { name: 'MLB.TV', color: 'blue', style: 'condensed', sub: 'EVERY GAME' },
+    { name: 'NHL', color: 'orange', style: 'condensed', sub: 'CENTER ICE' },
+    { name: 'F1 TV', color: 'red', style: 'condensed', sub: '4K · ALL GP' },
+    { name: 'WWE', color: 'red', style: 'condensed', sub: 'PPV · LIVE' },
+    { name: 'AMC', color: 'orange', style: 'condensed', sub: 'PREMIUM' },
+    { name: 'CNN', color: 'red', style: 'condensed', sub: 'NEWS · 24/7' },
+    { name: 'NETFLIX', color: 'red', style: 'condensed', sub: 'INCLUDED' },
+  ];
+
+  const events = [
+    { sport: 'NFL · SUNDAY', title: 'Chiefs vs Bills', meta: ['Q3 · 8:42', '4K'], badge: 'live', tint: 1, ch: 'CH.001' },
+    { sport: 'UEFA CHAMPIONS', title: 'Real Madrid vs City', meta: ['78\'', 'LIVE 4K'], badge: 'live', tint: 2, ch: 'CH.014' },
+    { sport: 'UFC 312 · PPV', title: 'Jones vs Aspinall', meta: ['MAIN EVENT', '9PM ET'], badge: 'ppv', tint: 1, ch: 'CH.022' },
+    { sport: 'NBA', title: 'Lakers vs Celtics', meta: ['4Q · 2:14', 'LIVE'], badge: 'live', tint: 4, ch: 'CH.008' },
+    { sport: 'PREMIUM · HBO', title: 'House of the Dragon', meta: ['S2 · NEW', '4K UHD'], badge: 'replay', tint: 3, ch: 'CH.047' },
+    { sport: 'F1 · QUALIFYING', title: 'Monaco GP', meta: ['LAP 34/57', 'LIVE 4K'], badge: 'live', tint: 1, ch: 'CH.031' },
+    { sport: 'PREMIER LEAGUE', title: 'Arsenal vs Liverpool', meta: ['SAT 12:30PM', '4K'], badge: 'upcoming', tint: 2, ch: 'CH.011' },
+    { sport: 'MLB', title: 'Yankees vs Red Sox', meta: ['7TH · 4-2', 'LIVE'], badge: 'live', tint: 4, ch: 'CH.018' },
+    { sport: 'BOXING · DAZN', title: 'Crawford vs Canelo', meta: ['ROUND 6', 'PPV 4K'], badge: 'live', tint: 1, ch: 'CH.029' },
+    { sport: 'NETFLIX · NEW', title: 'Stranger Things 5', meta: ['EP.1 LIVE', '4K HDR'], badge: 'replay', tint: 3, ch: 'CH.055' },
+    { sport: 'NHL · STANLEY CUP', title: 'Oilers vs Rangers', meta: ['GAME 7', 'LIVE'], badge: 'live', tint: 4, ch: 'CH.026' },
+    { sport: 'WWE · WRESTLEMANIA', title: 'Reigns vs Rhodes', meta: ['MAIN EVENT', 'PPV 4K'], badge: 'ppv', tint: 1, ch: 'CH.039' },
+  ];
+
+  // Build network logo tiles (duplicated for seamless loop)
+  const logoHTML = networks.map(n => `
+    <div class="logo-tile color-${n.color} style-${n.style}">
+      <div class="logo-tile-name">${n.name}</div>
+      <div class="logo-tile-sub">${n.sub}</div>
+    </div>`).join('');
+  logoRow.innerHTML = logoHTML + logoHTML;
+
+  // Build live event cards (duplicated)
+  const eventHTML = events.map(e => `
+    <div class="live-card tint-${e.tint}">
+      <div class="live-card-top">
+        <span class="live-card-badge ${e.badge}">${e.badge.toUpperCase()}</span>
+        <span class="live-card-ch">${e.ch}</span>
+      </div>
+      <div class="live-card-body">
+        <div class="live-card-sport">${e.sport}</div>
+        <div class="live-card-title">${e.title}</div>
+        <div class="live-card-meta">
+          <span>${e.meta[0]}</span>
+          <span class="dot"></span>
+          <span>${e.meta[1]}</span>
+        </div>
+      </div>
+    </div>`).join('');
+  eventRow.innerHTML = eventHTML + eventHTML;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initClock();
@@ -220,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCartDrawer();
   initCountdown();
   initInstallTabs();
+  initMarquee();
   document.querySelector('.cart-btn')?.addEventListener('click', openCart);
   document.querySelector('.cart-close')?.addEventListener('click', closeCart);
   document.querySelector('.cart-overlay')?.addEventListener('click', closeCart);
