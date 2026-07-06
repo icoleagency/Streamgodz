@@ -2,7 +2,7 @@
 
 /* !!! REPLACE THESE TWO VALUES WITH YOUR SUPABASE PROJECT INFO !!! */
 const SUPABASE_URL = 'https://xirnruzhbhqjydvrackw.supabase.co';
-const SUPABASE_ANON_KEY = 'PASTE_YOUR_ANON_KEY_HERE';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpcm5ydXpoYmhxanlkdnJhY2t3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMyOTI5OTEsImV4cCI6MjA5ODg2ODk5MX0.Kn2eoIdYcjfW8CrUL5MueuCsACojBVBqu571l6N6pbM';
 
 // Load Supabase client from CDN in the HTML file. This assumes `supabase` is global.
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
